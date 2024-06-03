@@ -18,9 +18,15 @@ def parse_stiemap(site):
     try:
         result = requests.get(site)
         big = re.findall('<loc>(.*?)</loc>', result.content.decode('utf-8'), re.S)
-        return list(big)
+        urls = list(big)
+        if len(urls) == 0:
+            print('请检查你的url是否有误。', site)
+            print('正确的应是完整的域名，包含https://，且不包含‘sitemap.xml’, 如下所示：')
+            print('正确的示例: https://ghlcode.cn')
+            print('详情参见: https://ghlcode.cn/fe032806-5362-4d82-b746-a0b26ce8b9d9')
+        return urls
     except:
-        print('请检查你的url是否有误。')
+        print('请检查你的url是否有误。', site)
         print('正确的应是完整的域名，包含https://，且不包含‘sitemap.xml’, 如下所示：')
         print('正确的示例: https://ghlcode.cn')
         print('详情参见: https://ghlcode.cn/fe032806-5362-4d82-b746-a0b26ce8b9d9')
