@@ -15,6 +15,7 @@ QUOTA = 100
 
 def parse_stiemap(site):
     site = f'{site}/sitemap.xml'
+    print("parse_stiemap ", site)
     try:
         result = requests.get(site)
         big = re.findall('<loc>(.*?)</loc>', result.content.decode('utf-8'), re.S)
@@ -24,6 +25,7 @@ def parse_stiemap(site):
             print('正确的应是完整的域名，包含https://，且不包含‘sitemap.xml’, 如下所示：')
             print('正确的示例: https://ghlcode.cn')
             print('详情参见: https://ghlcode.cn/fe032806-5362-4d82-b746-a0b26ce8b9d9')
+        print("parse_stiemap.urls", urls)
         return urls
     except:
         print('请检查你的url是否有误。', site)
@@ -40,7 +42,7 @@ def push_to_bing(site, urls, api_key):
         "siteUrl": site,
         "urlList": urls
     }
-
+    print("push_to_bing ", endpoint, payload)
     try:
         response = requests.post(endpoint, json=payload)
         result = response.json()
@@ -63,7 +65,7 @@ def push_to_bing_indexnow(site, urls, indexnow_key, indexnow_txt):
         "keyLocation": f"https://{site}/{indexnow_txt}.txt",
         "urlList": urls
     }
-    print("push_to_bing_indexnow.payload", payload)
+    print("push_to_bing_indexnow.payload", url, payload)
     try:
         response = requests.post(url, headers=headers, json=payload)
         result = response.json()
@@ -80,6 +82,7 @@ def push_to_baidu(site, urls, token):
 
     payload = "\n".join(urls)
     headers = {"Content-Type": "text/plain"}
+    print("push_to_baidu.payload", api_url, payload)
 
     try:
         response = requests.post(api_url, data=payload, headers=headers)
@@ -110,7 +113,6 @@ if __name__ == '__main__':
     if args.url:
         # 解析urls
         urls = parse_stiemap(args.url)
-        print("urls", urls)
         if urls is not None:
             # 判断当前urls数量是否超过额度，若超过则取当日最大值，默认为100，可根据实际情况修改
             if len(urls) > QUOTA:
