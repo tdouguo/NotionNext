@@ -57,6 +57,7 @@ def push_to_bing_indexnow(site, urls, indexnow_key, indexnow_txt):
         "keyLocation": f"https://{site}/{indexnow_txt}.txt",
         "urlList": urls
     }
+    print("push_to_bing_indexnow.payload", payload)
     try:
         response = requests.post(url, headers=headers, json=payload)
         result = response.json()
@@ -103,6 +104,7 @@ if __name__ == '__main__':
     if args.url:
         # 解析urls
         urls = parse_stiemap(args.url)
+        print("urls", urls)
         if urls is not None:
             # 判断当前urls数量是否超过额度，若超过则取当日最大值，默认为100，可根据实际情况修改
             if len(urls) > QUOTA:
