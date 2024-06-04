@@ -379,6 +379,26 @@ const Layout404 = props => {
                   'https://bu.dusays.com/2023/03/03/6401a7906aa4a.gif'
                 }></LazyImage>
 
+              <section class="pt-4 pb-5 error-page-main-inner">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12 block-404 text-center">
+                      <h1>
+                        {/* <img class="img-fluid" src="images/404.png" alt="404"> */}
+                        <LazyImage
+                        className='error-img h-60 md:h-full p-4'
+                        src={
+                          'https://www.tdouguo.com/public/images/404.png'
+                        }></LazyImage>
+                      </h1>
+                      <h1>对不起的!找不到网页.</h1>
+                      <p class="caption-text">您访问的页面不存在或已被删除！ (｡•ˇ‸ˇ•｡).</p>
+                      <div class="mt-5"> <a href="https://www.tdouguo.com" class="btn btn-primary btn-lg"><i class="icofont icofont-ui-home"></i> 返回首页</a> </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
               {/* 右侧文字 */}
               <div className='error-info flex-1 flex flex-col justify-center items-center space-y-4'>
                 <h1 className='error-title font-extrabold md:text-9xl text-7xl dark:text-white'>
@@ -392,6 +412,7 @@ const Layout404 = props => {
                 </Link>
               </div>
             </div>
+            
 
             {/* 404页面底部显示最新文章 */}
             <div className='mt-12'>
