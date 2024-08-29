@@ -4,12 +4,13 @@ const CONFIG = {
 
   HEO_HOME_BANNER_ENABLE: true,
 
-  HEO_SITE_CREATE_TIME: '2021-09-21', // 建站日期，用于计算网站运行的第几天
+  HEO_SITE_CREATE_TIME: '2023-06-21', // 建站日期，用于计算网站运行的第几天
 
   // 首页顶部通知条滚动内容，如不需要可以留空 []
   HEO_NOTICE_BAR: [
-    { title: '欢迎来到我的博客', url: 'https://blog.tangly1024.com' },
-    { title: '访问文档中心获取更多帮助', url: 'https://docs.tangly1024.com' }
+    { title: '欢迎来到我的博客', url: 'https://www.tdouguo.com' },
+    { title: '不容错过的精选好文，快来探索！', url: 'https://www.tdouguo.com/tag/%E5%BF%85%E7%9C%8B%E7%B2%BE%E9%80%89' },
+    { title: '更多精彩，等您来发现。', url: 'https://www.tdouguo.com/tag/%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0' }
   ],
 
   // 英雄区左右侧组件颠倒位置
@@ -20,10 +21,10 @@ const CONFIG = {
   // 英雄区(首页顶部大卡)
   HEO_HERO_TITLE_1: '分享编程',
   HEO_HERO_TITLE_2: '与思维认知',
-  HEO_HERO_TITLE_3: 'TANGLY1024.COM',
-  HEO_HERO_TITLE_4: '新版上线',
-  HEO_HERO_TITLE_5: 'NotionNext4.0 轻松定制主题',
-  HEO_HERO_TITLE_LINK: 'https://tangly1024.com',
+  HEO_HERO_TITLE_3: 'TDOUGUO.COM',
+  HEO_HERO_TITLE_4: '更多推荐',
+  HEO_HERO_TITLE_5: '更多好文，只需一点。',
+  HEO_HERO_TITLE_LINK: 'https://www.tdouguo.com',
 
   // 英雄区显示三个置顶分类
   HEO_HERO_CATEGORY_1: { title: '必看精选', url: '/tag/必看精选' },
@@ -49,19 +50,51 @@ const CONFIG = {
   // 个人资料底部按钮
   HEO_INFO_CARD_URL1: '/about',
   HEO_INFO_CARD_ICON1: 'fas fa-user',
-  HEO_INFO_CARD_URL2: 'https://github.com/tangly1024',
+  HEO_INFO_CARD_URL2: 'https://github.com/tdouguo',
   HEO_INFO_CARD_ICON2: 'fab fa-github',
-  HEO_INFO_CARD_URL3: 'https://www.tangly1024.com',
+  HEO_INFO_CARD_URL3: 'https://www.tdouuguo.com',
   HEO_INFO_CARD_TEXT3: '了解更多',
 
   // 用户技能图标
   HEO_GROUP_ICONS: [
     {
-      title_1: 'AfterEffect',
-      img_1: '/images/heo/20239df3f66615b532ce571eac6d14ff21cf072602.webp',
+      title_1: 'Unity',
+      img_1: '/images/td/icon/icon_unity.webp',
+      color_1: '#f7cb4f',
+      title_2: 'HTML',
+      img_2: '/images/td/icon/icon_unity.webp',
+      color_2: '#e9572b'
+    },
+    {
+      title_1: 'Unreal',
+      img_1: '/images/td/icon/icon_unreal.webp',
       color_1: '#989bf8',
       title_2: 'Sketch',
-      img_2: '/images/heo/2023e0ded7b724a39f12d59c3dc8fbdc7cbe074202.webp',
+      img_2: '/images/td/icon/icon_unreal.webp',
+      color_2: '#ffffff'
+    },
+    {
+      title_1: 'VS Code',
+      img_1: '/images/td/icon/icon_vscode.webp',
+      color_1: '#eb6840',
+      title_2: 'Principle',
+      img_2: '/images/td/icon/icon_vscode.webp',
+      color_2: '#8f55ba'
+    },
+    {
+      title_1: 'Rider',
+      img_1: '/images/td/icon/icon_rider.webp',
+      color_1: '#f29e39',
+      title_2: 'CSS3',
+      img_2: '/images/td/icon/icon_rider.webp',
+      color_2: '#2c51db'
+    },
+    {
+      title_1: 'PyCharm',
+      img_1: '/images/td/icon/icon_pycharm.webp',
+      color_1: '#ffffff',
+      title_2: 'Python',
+      img_2: '/images/td/icon/icon_pycharm.webp',
       color_2: '#ffffff'
     },
     {
@@ -73,28 +106,12 @@ const CONFIG = {
       color_2: '#4082c3'
     },
     {
-      title_1: 'FinalCutPro',
-      img_1: '/images/heo/20233e777652412247dd57fd9b48cf997c01070702.webp',
-      color_1: '#ffffff',
-      title_2: 'Python',
-      img_2: '/images/heo/20235c0731cd4c0c95fc136a8db961fdf963071502.webp',
-      color_2: '#ffffff'
-    },
-    {
       title_1: 'Swift',
       img_1: '/images/heo/202328bbee0b314297917b327df4a704db5c072402.webp',
       color_1: '#eb6840',
       title_2: 'Principle',
       img_2: '/images/heo/2023f76570d2770c8e84801f7e107cd911b5073202.webp',
       color_2: '#8f55ba'
-    },
-    {
-      title_1: 'illustrator',
-      img_1: '/images/heo/20237359d71b45ab77829cee5972e36f8c30073902.webp',
-      color_1: '#f29e39',
-      title_2: 'CSS3',
-      img_2: '/images/heo/20237c548846044a20dad68a13c0f0e1502f074602.webp',
-      color_2: '#2c51db'
     },
     {
       title_1: 'JS',
@@ -114,7 +131,7 @@ const CONFIG = {
     }
   ],
 
-  HEO_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
+  HEO_SOCIAL_CARD: false, // 是否显示右侧，点击加入社群按钮
   HEO_SOCIAL_CARD_TITLE_1: '交流频道',
   HEO_SOCIAL_CARD_TITLE_2: '加入我们的社群讨论分享',
   HEO_SOCIAL_CARD_TITLE_3: '点击加入社群',
