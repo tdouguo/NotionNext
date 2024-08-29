@@ -378,7 +378,7 @@ const Layout404 = props => {
               <LazyImage
                 className='error-img h-60 md:h-full p-4'
                 src={
-                  'https://qiz.cc/i/1/tdouguo_404.png'
+                  'https://f.960517.xyz/ts/tdouguo_404.png'
                 }></LazyImage>
 
               {/* 右侧文字 */}
